@@ -4,32 +4,38 @@ import edlineals.*;
 import ednolineals.*;
 
 public class Barca {
-	private Acb<Soci>[]socis; 
-	/* l�Acb de la primera posici� emmagatzema els socis amb un n�mero de soci acabat en 0, 
-	 * el de la posici� 1 els acabats en 1, ...... Els Acb�s emmagatzemen objectes Soci. */
-	private Pila seccions; /* Magatzem de les diferents seccions del club */
+
+	/*** Els socis es magatzeman amb 10 arbres, cada soci anira a un arbre en funcio del seu numero de soci
+	 *  Acb de la primera posicio emmagatzema els socis amb un nomero de soci acabat en 0, etc..
+	 */
+	private Acb<Soci>[]socis;
+
+	/* Magatzem de les diferents seccions del club */
+	private Pila seccions;
 
 	/*
-	 * TODO Soluci� Exercici 5.1
+	 * TODO Solucio Exercici 5.1
 	 */
-	public Barca(){ // Class Bar�a
+	public Barca(){
 		socis = new Acb[10];
 		for (int i=0; i<10; i++) 
 			socis[i]=new AcbEnll<Soci>();
 		seccions=new PilaEnll();		
 	}
 	/*
-	 * TODO Soluci� Exercici 5.2
+	 * TODO Solucio Exercici 5.2
 	 */
-	public void addSoci(Soci p) throws Exception{ // Class Bar�a
-		socis[(int) (p.getNumeroSoci()%10)].Inserir(p);
+	public void addSoci(Soci p) throws Exception{
+		int index = (int) (p.getNumeroSoci()%10);
+		socis[index].Inserir(p);
 	}
 
 	/*
-	 * TODO Soluci� Exercici 5.3
+	 * TODO Solucio Exercici 5.3
 	 */
-	public void remSoci(Soci q) throws Exception{ // Class Bar�a
-		socis[(int) (q.getNumeroSoci()%10)].Esborrar(q);
+	public void remSoci(Soci q) throws Exception{
+		int index = (int) (q.getNumeroSoci()%10);
+		socis[index].Esborrar(q);
 	}
 	
 	@Override

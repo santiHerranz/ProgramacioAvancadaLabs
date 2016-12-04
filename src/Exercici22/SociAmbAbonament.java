@@ -2,7 +2,7 @@ package Exercici22;
 
 public class SociAmbAbonament extends Soci{
 private Seccio abonada;
-private char tipusAbonament; //A, B ó C;
+private char tipusAbonament; //A, B ? C;
 private String seient;
 
 public SociAmbAbonament(long numeroSoci, String nom, Seccio abonada, char tipus, String cadira){

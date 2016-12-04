@@ -10,13 +10,13 @@ public interface Cua<E> {
 	void encuar(E node);
 
 	/**
-	 * Desencuar: elimina l’element del CAP de la cua.
+	 * Desencuar: elimina l?element del CAP de la cua.
 	 * @return      Node
 	 */
 	E desEncuar() throws Exception;
 
 	/**
-	 * Cua buida: determina si l’estructura és buida.
+	 * Cua buida: determina si l?estructura ?s buida.
 	 * @return      boolean
 	 */
 	boolean cuaBuida();
@@ -28,9 +28,9 @@ public interface Cua<E> {
 	void inicialitzar();
 
 	/**
-	*	Consulta cua: operació de consulta que permet consultar l’element que hi ha al
-	*	CAP de la cua, sense extreure’l. Aquesta operació no és bàsica, es pot aconseguir
-	*	la mateixa funcionalitat fent crides a les operacions d’encuar i desencuar.
+	*	Consulta cua: operaci? de consulta que permet consultar l?element que hi ha al
+	*	CAP de la cua, sense extreure?l. Aquesta operaci? no ?s b?sica, es pot aconseguir
+	*	la mateixa funcionalitat fent crides a les operacions d?encuar i desencuar.
 	 * @return      Node
 	 * @throws Exception
 	 */

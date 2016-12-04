@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class CuaEnll<E> implements Cua<E> {
 
 	
-	// adreça al node final de la cua
+	// adreca al node final de la cua
 	protected Node<E> fi;
 
 	public CuaEnll(){
@@ -31,13 +31,13 @@ public class CuaEnll<E> implements Cua<E> {
 
 	@Override
 	public E desEncuar() throws Exception {
-		if(cuaBuida() == true) throw new Exception("La cua està buida");
+		if(cuaBuida() == true) throw new Exception("La cua esta buida");
 
-		// treure el cap (el node següent al fi)
+		// treure el cap (el node seguent al fi)
 		Node<E> cap = this.fi.seg;
 		E value = cap.inf;
 
-		// el cap és el fi (nomès hi ha un element)
+		// el cap es el fi (nomes hi ha un element)
 		if(this.fi.equals(cap))
 			this.fi = null;
 		else
@@ -59,7 +59,7 @@ public class CuaEnll<E> implements Cua<E> {
 
 	@Override
 	public E consulta() throws Exception {
-		if(cuaBuida() == true) throw new Exception("La cua està buida");
+		if(cuaBuida() == true) throw new Exception("La cua esta buida");
 		return fi.seg.inf;
 	}
 
@@ -77,8 +77,8 @@ public class CuaEnll<E> implements Cua<E> {
 	}
 
 	/*
-	 * Metode que calcula i retorna el nombre d’elements que té la Cua
-	 * la implementació ha de ser recursiva
+	 * Metode que calcula i retorna el nombre d elements que te la Cua
+	 * la implementacio ha de ser recursiva
 	 */
 	public int quants(){
 		return quants(this.fi);
@@ -96,7 +96,7 @@ public class CuaEnll<E> implements Cua<E> {
 
 //CuaEnll.Equals
 /*
- * dues cues són iguals si les seves corresponents seqüències enllaçades fan referència
+ * dues cues son iguals si les seves corresponents sequencies enllacades fan referencia
  * a objectes iguals (equals) i en el mateix ordre.
  */
 	public boolean equals(Object u) {
@@ -144,7 +144,7 @@ public class CuaEnll<E> implements Cua<E> {
 
 // CuaEnll.Clonar
 /*
- * S'ha de clonar la cua node a node enllaçant els nous nodes entre si
+ * S'ha de clonar la cua node a node enllacant els nous nodes entre si
  */
 	public CuaEnll<E> clone() throws CloneNotSupportedException {
 		CuaEnll<E> copia = new CuaEnll<E>();
